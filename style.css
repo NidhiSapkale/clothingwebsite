@@ -26,6 +26,7 @@
 
         .nav-links li {
             margin: 0 15px;
+            position: relative; /* drop downing */
         }
 
         .nav-links a {
@@ -44,6 +45,33 @@
             font-weight: bold;
             text-transform: uppercase;
             margin-right: auto;
+        }
+        /* Dropdown Menu Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute; /* Positioned below the dropdown item */
+            top: 100%; /* Align it below the dropdown link */
+            left: 0;
+            background-color: #e0e0e0; /* Background color of the dropdown */
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            border-radius: 5px;
+            z-index: 1; /* Ensure it appears above other elements */
+        }
+
+        .dropdown-menu li {
+            padding: 5px 10px;
+        }
+        
+        .dropdown-menu li a {
+            padding: 5px 10px;
+            color: #413939;
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block; /* Show dropdown on hover */
         }
 
         /* Hero Section */
@@ -113,7 +141,7 @@
 
         /* Collection Section */
         .collection-section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             background-color: #fff;
         }
@@ -148,7 +176,7 @@
 
         .product-item img {
             width: 90%;
-            height: 600px;
+            height: 400px;
             object-fit: cover;
             border-radius: 10px;
             margin-bottom: 15px; 
